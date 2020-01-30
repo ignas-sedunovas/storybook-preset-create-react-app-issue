@@ -1,0 +1,13 @@
+.with-font {
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./roboto-v20-latin-500.woff2') format('woff2'),
+  url('./roboto-v20-latin-500.woff') format('woff')
+}

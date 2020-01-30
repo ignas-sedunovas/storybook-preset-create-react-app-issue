@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from 'react';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import styles from './App.module.scss';
+
+export const StyledParagraph: FC = () => (
+    <p className={styles['with-font']}>I am with custom font.</p>
+);
+
+export const NotStyledParagraph: FC = () => (
+    <p>And I am without.</p>
+);
+
+const App: FC = () => (
+    <>
+        <StyledParagraph/>
+        <NotStyledParagraph/>
+    </>
+);
 
 export default App;
